@@ -1,0 +1,14 @@
+
+
+{
+    "name": "my-some-package",
+    "version": "1.0.0",
+    "main": "index.html",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Lina373/practice"
+    },
+    "dependencies": {
+        "axios": "^0.27.2"
+    }
+}
