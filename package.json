@@ -1,19 +1,44 @@
 {
-  "dependencies": {
-    "axios": "^0.27.2"
-  },
-  "name": "polina",
+  "name": "practice",
+  "author": "Polina",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
-  },
+  "keywords": [],
+  "license": "ISC",
+  "description": "",
   "scripts": {
+    "start": "npx cross-env NODE_ENV=production npm run start:webpack",
+    "start:dev": "npx cross-env NODE_ENV=development npm run start:webpack",
+    "start:webpack": "npx webpack serve --config ./cli/webpack.config.js",
+    "build": "npm run clean && npx cross-env NODE_ENV=production npm run build:webpack",
+    "build:dev": "npm run clean && npx cross-env NODE_ENV=development npm run build:webpack",
+    "build:webpack": "npx webpack-cli build --config ./cli/webpack.config.js",
+    "clean": "echo 'Removing dist' && npx rimraf ./dist && echo 'Dist removed'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.19.1",
+    "@babel/preset-react": "^7.18.6",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
+    "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "handlebars-loader": "^1.7.2",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.7.1",
+    "react-refresh": "^0.14.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.54.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  }
 }

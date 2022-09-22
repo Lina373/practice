@@ -1,10 +1,11 @@
-function component (){
+import "./global.scss";
 
-    const eltment = document.createElement('div');
+import { default as React } from "react";
+import { default as ReactDOM } from "react-dom/client";
+import { Application } from "./Application";
 
-    eltment.innerHTML = _.join(['Hello','webpack'], ' ');
+const applicationRoot = ReactDOM.createRoot(
+  document.getElementById("application-root")
+);
 
-    return eltment;
-}
-
-document.body.appendChild(comment());
+applicationRoot.render(<Application />);
